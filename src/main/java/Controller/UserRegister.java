@@ -38,7 +38,7 @@ public class UserRegister extends HttpServlet {
             pass = request.getParameter("password");
             String repassp = request.getParameter("repassword");
 
-            PreparedStatement pst = con.prepareStatement("insert into login values(?,?)");
+            PreparedStatement pst = con.prepareStatement("insert into login(username,password) values(?,?)");
             pst.setString(1, user);
             pst.setString(2, pass);
             i = pst.executeUpdate();
@@ -59,8 +59,7 @@ public class UserRegister extends HttpServlet {
             }
 
         } catch (Exception e) {
-
-        }
+e.printStackTrace()   ;     }
 
     }
 

@@ -52,7 +52,7 @@ public class AddPatient extends HttpServlet {
             String DateAndTime = df2.format(todaysDate);
 
             Connection con = DatabaseConnection.initializeDatabase();
-            PreparedStatement pst = con.prepareStatement("insert into patient values(?,?,?,?,?,?,?,?,?)");
+            PreparedStatement pst = con.prepareStatement("insert into patient(fname,lname,gender,city,email,age,address,DateAndTime,phone) values(?,?,?,?,?,?,?,?,?)");
             pst.setString(9, phone);
             pst.setString(1, fname);
             pst.setString(2, lname);

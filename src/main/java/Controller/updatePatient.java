@@ -39,7 +39,7 @@ public class updatePatient extends HttpServlet {
 
         try {
             Connection con = DatabaseConnection.initializeDatabase();
-            PreparedStatement pst = con.prepareStatement("update patient set fname = ? , lname = ? , gender = ? , city = ? , email = ? , age = ? , address = ?  where mobile = '" + phone + "' ");
+            PreparedStatement pst = con.prepareStatement("update patient set fname = ? , lname = ? , gender = ? , city = ? , email = ? , age = ? , address = ?  where phone = '" + phone + "' ");
             pst.setString(1, fname);
             pst.setString(2, lname);
             pst.setString(3, gender);
@@ -66,7 +66,7 @@ public class updatePatient extends HttpServlet {
             }
             con.close();
         } catch (Exception e) {
-
+e.printStackTrace();
         }
 
     }

@@ -36,12 +36,12 @@ public class UserLogin extends HttpServlet {
             String passp = request.getParameter("password");
             Connection con = DatabaseConnection.initializeDatabase();
 
-            String s = "select *from login";
+            String s = "select *from login where username='"+userp+"'";
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(s);
             while (rs.next()) {
-                user = rs.getString(1);
-                pass = rs.getString(2);
+                user = rs.getString(2);
+                pass = rs.getString(3);
             }
             if (userp.equals(user) && passp.equals(pass)) {
                 pw.println("<script type=\"text/javascript\">");

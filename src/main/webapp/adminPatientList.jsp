@@ -176,21 +176,21 @@
                                 }
                                 ResultSet rs = st.executeQuery(sql);
                                 while (rs.next()) {
-                                    String mob = rs.getString(9);
+                                    String mob = rs.getString(10);
                         %>
                         <div class="table100-body js-pscroll">
                             <table>
                                 <tbody>
                                     <tr class="row100 body">
-                                        <td class="cell100 column1"><%=rs.getString(1)%></td>
-                                        <td class="cell100 column2"><%=rs.getString(2)%></td>
-                                        <td class="cell100 column3"><%=rs.getString(3)%></td>
-                                        <td class="cell100 column4"><%=rs.getString(4)%></td>
-                                        <td class="cell100 column5"><%=rs.getString(5)%></td>
-                                        <td class="cell100 column6"><%=rs.getString(6)%></td>
-                                        <td class="cell100 column7"><%=rs.getString(7)%></td>
-                                        <td class="cell100 column8"><%=rs.getString(8)%></td>
-                                        <td class="cell100 column9"><%=rs.getString(9)%></td>
+                                        <td class="cell100 column1"><%=rs.getString(2)%></td>
+                                        <td class="cell100 column2"><%=rs.getString(3)%></td>
+                                        <td class="cell100 column3"><%=rs.getString(4)%></td>
+                                        <td class="cell100 column4"><%=rs.getString(5)%></td>
+                                        <td class="cell100 column5"><%=rs.getString(6)%></td>
+                                        <td class="cell100 column6"><%=rs.getString(7)%></td>
+                                        <td class="cell100 column7"><%=rs.getString(8)%></td>
+                                        <td class="cell100 column8"><%=rs.getString(9)%></td>
+                                        <td class="cell100 column9"><%=rs.getString(10)%></td>
                                         <td class="cell100 column10">
                                             <a href="updatePatient.jsp?mob=<%=mob%>">Edit</a>
                                             &nbsp;&nbsp;&nbsp;&nbsp;
