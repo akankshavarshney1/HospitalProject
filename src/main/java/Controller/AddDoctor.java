@@ -43,7 +43,7 @@ public class AddDoctor extends HttpServlet {
             String sid = request.getParameter("id");
             int id = Integer.parseInt(sid);
             String fname = request.getParameter("fname");//Fetching First Name 
-            String lname = request.getParameter("lname");
+            String lname = request.getParameter("lname");//Fetching Last Name 
             String gender = request.getParameter("gender");
             String phone = request.getParameter("Mobile");
             String city = request.getParameter("City");
